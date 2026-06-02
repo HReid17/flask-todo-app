@@ -20,6 +20,26 @@ Users can create, edit, complete and delete tasks through a clean and responsive
 
 ---
 
+## Screenshots
+
+### Home Page
+
+![Home Page](screenshots/home.png)
+
+### Creating a Task
+
+![Add Task](screenshots/add-task.png)
+
+### Editing a Task
+
+![Edit Task](screenshots/edit-task.png)
+
+### Completed Task
+
+![Completed Task](screenshots/complete-task.png)
+
+---
+
 ## Technologies Used
 
 ### Backend
