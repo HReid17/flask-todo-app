@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}
+Edit Task | My Todo
+{% endblock %}
+
+{% block content %}
+
+<h1>Edit Task</h1>
+
+<form method="POST">
+
+    <input type="text" name="task" value="{{ task.text }}">
+
+    <button type="submit">
+        Save Changes
+    </button>
+
+</form>
+
+<a href="{{ url_for('home') }}" class="cancel-btn">
+    Cancel
+</a>
+
+{% endblock %}

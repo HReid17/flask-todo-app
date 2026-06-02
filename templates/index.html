@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home | My Todo
+{% endblock %}
+
+{% block content %}
+
+<h1>My Todo App</h1>
+
+<form method="POST">
+
+    <input type="text" name="task" placeholder="Enter Task">
+
+    <button type="submit">
+        Submit
+    </button>
+
+</form>
+
+<p>Tasks Remaining: {{ remaining_tasks }}</p>
+
+{% if not tasks %}
+
+<p class="empty-message">
+    No tasks yet. Add your first task!
+</p>
+
+{% endif %}
+
+<ul>
+
+    {% for task in tasks %}
+
+    <li>
+
+        <div class="task-info">
+
+            {% if task.completed %}
+
+            <s>{{ task.text }}</s>
+
+            {% else %}
+
+            <span>{{ task.text }}</span>
+
+            {% endif %}
+
+            <small>
+                Created:
+                {{ task.created_at.strftime('%d/%m/%Y %H:%M') }}
+            </small>
+
+        </div>
+
+        <div class="task-actions">
+
+            <a href="{{ url_for('toggle_complete', id=task.id) }}">
+                Complete
+            </a>
+
+            <a href="{{ url_for('edit_task', id=task.id) }}">
+                Edit
+            </a>
+
+            <a href="{{ url_for('delete_task', id=task.id) }}">
+                Delete
+            </a>
+
+        </div>
+
+    </li>
+
+    {% endfor %}
+
+</ul>
+
+{% endblock %}

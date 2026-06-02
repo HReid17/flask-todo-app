@@ -1,0 +1,161 @@
+/* Reset Default Browser Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Body */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #121212;
+    color: white;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+
+/* Main Container */
+
+.container {
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+/* Heading */
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 42px;
+}
+
+
+/* Form */
+
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+
+/* Input */
+
+input {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+
+/* Buttons */
+
+button,
+a {
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+
+/* Submit Button */
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+/* Individual Task */
+
+li {
+    background-color: #1f1f1f;
+    padding: 18px;
+    border-radius: 10px;
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Task Info */
+
+.task-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.task-info span,
+.task-info s {
+    font-size: 18px;
+}
+
+.task-info small {
+    color: #999;
+    font-size: 13px;
+}
+
+
+/* Completed Tasks */
+
+s {
+    color: #888;
+}
+
+
+/* Action Buttons */
+
+.task-actions {
+    display: flex;
+    gap: 15px;
+}
+
+li a {
+    background-color: #333;
+    color: white;
+}
+
+li a:hover {
+    background-color: #555;
+}
+
+/* Empty State */
+
+.empty-message {
+    text-align: center;
+    color: #999;
+    margin-top: 30px;
+}
+
+.cancel-btn {
+    display: inline-block;
+    margin-top: 0px;
+    background-color: #555;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.cancel-btn:hover {
+    background-color: #777;
+}
